@@ -1,0 +1,391 @@
+<!-- Built by Olivia — https://discord.gg/ojailbreaks -->
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LogicLab — Portfolio page 11 draft</title>
+    <style>
+      @font-face {
+        font-family: Thai;
+        src: url("portfolio-assets/noto-sans-thai.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: swap;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: #e5ecf2;
+        color: #17334d;
+        font:
+          12px/1.7 Thai,
+          Arial,
+          sans-serif;
+        margin: 0;
+        padding: 25px;
+      }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: auto;
+        background: #fff;
+        padding: 14mm 15mm 11mm;
+        box-shadow: 0 8px 35px #0d304c22;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #17334d;
+        padding-bottom: 10px;
+      }
+      .eyebrow {
+        letter-spacing: 2px;
+        font:
+          9px Arial,
+          sans-serif;
+        color: #617e97;
+      }
+      .page-number {
+        font:
+          700 23px Arial,
+          sans-serif;
+        color: #a7bfce;
+      }
+      .title {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin: 20px 0 9px;
+      }
+      .mark {
+        background: #10243c;
+        color: #ffd34d;
+        font: 700 27px monospace;
+        border-radius: 11px;
+        width: 52px;
+        height: 52px;
+        display: grid;
+        place-items: center;
+      }
+      .title h1 {
+        font:
+          700 34px Arial,
+          sans-serif;
+        letter-spacing: -1px;
+        margin: 0;
+      }
+      .title p {
+        margin: 4px 0 0;
+        font-size: 15px;
+        color: #557a9b;
+      }
+      .draft {
+        background: #fff4cf;
+        border: 1px solid #e6d084;
+        color: #7c641d;
+        border-radius: 5px;
+        padding: 7px 11px;
+        font-size: 10px;
+        margin: 13px 0 17px;
+      }
+      h2 {
+        font-size: 12px;
+        margin: 0 0 5px;
+        font-weight: 700;
+      }
+      p {
+        margin: 0;
+      }
+      .intro {
+        display: grid;
+        grid-template-columns: 1fr 1.35fr;
+        gap: 23px;
+        margin-bottom: 17px;
+      }
+      .intro p {
+        font-size: 10px;
+        color: #617e94;
+        line-height: 1.9;
+      }
+      .label {
+        font:
+          9px Arial,
+          sans-serif;
+        letter-spacing: 1px;
+        color: #7290a7;
+        display: block;
+        margin-bottom: 6px;
+      }
+      figure {
+        margin: 0;
+      }
+      .working {
+        border: 1px solid #dce6ef;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .working img {
+        width: 100%;
+        display: block;
+      }
+      .working figcaption {
+        background: #f1f6fb;
+        color: #587b97;
+        font-size: 9px;
+        padding: 7px 10px;
+      }
+      .results {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 15px 0;
+      }
+      .result {
+        padding: 9px 11px;
+        background: #edf5fc;
+        border-radius: 6px;
+        border: 1px solid #d9e5ef;
+      }
+      .result b {
+        font:
+          700 23px Arial,
+          sans-serif;
+        display: block;
+        color: #15344e;
+      }
+      .result span {
+        font-size: 9px;
+        color: #5f809b;
+      }
+      .result.error {
+        background: #fff1e9;
+        border-color: #efd4c2;
+      }
+      .result.error b {
+        color: #a65031;
+      }
+      .bottom {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 20px;
+      }
+      .error-figure {
+        border: 1px solid #e3e8ed;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 6px;
+      }
+      .error-figure img {
+        display: block;
+        width: 100%;
+      }
+      .error-figure figcaption {
+        font-size: 8px;
+        background: #fff4ec;
+        padding: 6px 9px;
+        color: #9b573a;
+      }
+      .authorship {
+        padding: 10px 12px;
+        background: #f5f8fb;
+        border-radius: 6px;
+      }
+      .authorship p {
+        font-size: 9px;
+        color: #6d8498;
+        line-height: 1.9;
+      }
+      .tech {
+        font:
+          8px Arial,
+          sans-serif;
+        color: #6283a1;
+        letter-spacing: 0.5px;
+        margin: 10px 0;
+      }
+      .qr-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 13px;
+      }
+      .qr-row img {
+        width: 76px;
+        height: 76px;
+        border: 1px solid #d5dfe8;
+      }
+      .qr-row strong {
+        font-size: 10px;
+        color: #866719;
+        display: block;
+      }
+      .qr-row p {
+        font-size: 8px;
+        color: #7890a3;
+        overflow-wrap: anywhere;
+      }
+      .footnote {
+        margin-top: 10px;
+        font-size: 8px;
+        color: #8095a7;
+        line-height: 1.8;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #dbe5ee;
+        margin-top: 18px;
+        padding-top: 9px;
+        font-size: 8px;
+        color: #7f94a6;
+      }
+      .footer span:first-child {
+        font:
+          9px Arial,
+          sans-serif;
+        letter-spacing: 1.3px;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      @media print {
+        body {
+          padding: 0;
+          background: white;
+        }
+        .page {
+          box-shadow: none;
+          margin: 0;
+          min-height: 297mm;
+          break-after: page;
+        }
+      }
+      @media screen and (max-width: 820px) {
+        body {
+          padding: 0;
+        }
+        .page {
+          width: 100%;
+          min-height: 100vh;
+          padding: 25px;
+        }
+        .intro,
+        .bottom {
+          grid-template-columns: 1fr;
+        }
+        .title h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="page">
+      <div class="top">
+        <span class="eyebrow">EDUCATIONAL SOFTWARE / COMPUTER ENGINEERING</span
+        ><span class="page-number">11</span>
+      </div>
+      <div class="title">
+        <div class="mark">01</div>
+        <div>
+          <h1>LogicLab</h1>
+          <p>จำลองและตรวจสอบวงจรดิจิทัล</p>
+        </div>
+      </div>
+      <div class="draft">
+        ร่างก่อนส่งสมัคร · ผลทดสอบในเครื่อง · รออนุมัติเผยแพร่และตรวจ URL จริง ·
+        รอทบทวนแบบฝึกหัดของผู้สมัคร
+      </div>
+      <div class="intro">
+        <div>
+          <h2>ปัญหา</h2>
+          <p>
+            การลองสวิตช์เพียงบางชุดอาจไม่พบข้อผิดพลาด
+            จึงต้องมีเครื่องมือให้เห็นผลวงจรและตรวจครบทุกชุดอินพุต
+          </p>
+        </div>
+        <div>
+          <h2>แนวทาง</h2>
+          <p>
+            แทนอุปกรณ์และสายเป็นกราฟ เรียงลำดับคำนวณด้วย Topological sort
+            และตรวจ Actual เทียบกับ Expected ที่ระบุแยกจากเครื่องจำลอง
+          </p>
+        </div>
+      </div>
+      <span class="label">01 / WORKING CIRCUIT — LOCAL PRODUCTION BUILD</span>
+      <figure class="working">
+        <img
+          src="screenshots/working-circuit.png"
+          alt="วงจร Half-adder ทำงานจริง A=1 B=1 Sum=0 Carry=1"
+        />
+        <figcaption>
+          A=1, B=1 → Sum=0, Carry=1 · แสดงสถานะด้วยสีและตัวเลข ·
+          รองรับการบันทึก/โหลด JSON
+        </figcaption>
+      </figure>
+      <div class="results">
+        <div class="result">
+          <b>4 / 4</b><span>Half-adder ผ่านครบทุกกรณี</span>
+        </div>
+        <div class="result">
+          <b>8 / 8</b><span>Full-adder ผ่านครบทุกกรณี</span>
+        </div>
+        <div class="result error">
+          <b>1 FAIL</b><span>ตรวจพบ OR แทน XOR ที่ A=B=1</span>
+        </div>
+      </div>
+      <div class="bottom">
+        <div>
+          <span class="label">02 / DETECTED MISMATCH</span>
+          <figure class="error-figure">
+            <img
+              src="screenshots/error-verification.png"
+              alt="ตารางตรวจพบ Expected Sum 0 และ Actual Sum 1 ที่อินพุต 11"
+            />
+            <figcaption>
+              Expected Sum=0 แต่ Actual Sum=1 · ซ่อม OR → XOR แล้วผ่าน 4/4
+            </figcaption>
+          </figure>
+          <p class="footnote">
+            หลักฐานในเครื่อง: 74 automated engine/JSON tests ผ่าน และ 18 browser
+            tests ผ่าน (ข้าม 2 กรณี desktop บน mobile)
+            การรันในขั้นนี้ดำเนินการโดยเครื่องมือ AI
+          </p>
+        </div>
+        <div>
+          <div class="authorship">
+            <h2>การใช้ AI และบทบาทของผู้สมัคร</h2>
+            <p>
+              ผู้สมัครกำหนดความต้องการจากความสนใจด้านวงจรไฟฟ้าและอิเล็กทรอนิกส์
+              ใช้ AI ช่วยสร้างโค้ดและชุดทดสอบเริ่มต้น การอธิบาย แก้ไข
+              และทดสอบด้วยตนเองยังรอหลักฐานจากแบบฝึกหัดก่อนสรุปเป็นผลงานส่วนบุคคล
+            </p>
+          </div>
+          <p class="tech">REACT · TYPESCRIPT · VITE · REACT FLOW</p>
+          <div class="qr-row">
+            <img
+              src="portfolio-assets/demo-qr-PENDING.png"
+              alt="QR ของปลายทางที่เสนอ ยังไม่ยืนยันว่าออนไลน์"
+            />
+            <div>
+              <strong>ยังไม่ใช่เดโมที่ยืนยันแล้ว</strong>
+              <p>ปลายทางที่เสนอ:<br />https://whybemqd.github.io/logiclab/</p>
+            </div>
+          </div>
+          <p class="footnote">
+            จำลองเฉพาะ 0/1 ของ combinational logic สูงสุด 6 inputs
+            ไม่จำลองแรงดัน กระแส หรือเวลาหน่วง
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>FROM CIRCUIT TO CODE</span
+        ><span>Built by Olivia — https://discord.gg/ojailbreaks</span>
+      </div>
+    </article>
+  </body>
+</html>

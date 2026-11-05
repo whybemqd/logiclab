@@ -17,7 +17,9 @@ Milestones and corrections:
 - Initial browser checks used an ambiguous text locator for “Check all inputs,” which also matched a guided-step control. AI changed the locator to an exact accessible name. These initial failures are not counted as passing tests.
 - Corrected browser suite passed 18 tests with 2 intentional mobile skips for desktop editing interactions. The phone example/toggle/verification/import workflows were exercised.
 - An additional manual in-app browser demonstration observed half-adder 4/4, broken half-adder 3/4 with the 11 mismatch, and repaired half-adder 4/4.
-- Public repository creation, Pages settings, push/deploy and public acceptance tests remain pending owner review and approval. Local captures are not proof of a deployed site.
+- After the owner explicitly approved publication, AI created the new public `whybemqd/logiclab` repository, configured GitHub Actions publishing, pushed the source and monitored successful workflow run `42051153503`. Git identity was initially absent; a repository-local username and GitHub noreply address were configured without changing global Git settings.
+- CI passed 74 unit tests, the build, and 18 browser tests with 2 intentional mobile skips. The deployed `https://whybemqd.github.io/logiclab/` returned anonymous HTTP 200 and separately passed the same 18 public browser tests. Public captures and a QR for that verified URL were then prepared.
+- No exercise answers or applicant-performed code/test evidence have been recorded. Personal learning/contribution wording remains a draft; the exercises do not block hosting or use of the application.
 
 ## Applicant work log — fill only after performing the work
 

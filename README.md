@@ -4,11 +4,11 @@ Built by Olivia — https://discord.gg/ojailbreaks
 
 Educational digital-logic simulator made with React, TypeScript and Vite. Editing uses React Flow. The simulation engine has no React or browser dependencies. Simulation, verification and JSON processing run in the visitor's browser. Thai fonts, icons, JavaScript and CSS are bundled; no API keys, paid services or runtime CDN are required.
 
-**Publishing status: local application complete; awaiting owner's approval.**
+**Published on GitHub Pages and publicly verified on 5 November 2026.**
 
-Proposed new public repository: `https://github.com/whybemqd/logiclab`.
-Proposed GitHub Pages address: `https://whybemqd.github.io/logiclab/`.
-These are intended destinations, not claims of an existing repository or deployed site. GitHub CLI authenticated as `whybemqd`; the exact repository API returned 404 before any project files were created. Recheck immediately before creation.
+Public demo: **[Open LogicLab](https://whybemqd.github.io/logiclab/)**.
+Public source: [whybemqd/logiclab](https://github.com/whybemqd/logiclab).
+The owner reviewed the local preview and explicitly approved publishing. A new repository was created only after authenticated checks confirmed the name was unused. The site is served by GitHub Pages independently of the development computer, and visitors need no login. Anonymous HTTP and desktop/mobile-emulation browser acceptance checks passed against this actual public URL.
 
 ## Windows setup
 
@@ -20,6 +20,17 @@ npm run dev
 ```
 
 Open the URL printed by Vite, normally `http://127.0.0.1:5173/logiclab/`. Keep the terminal running. To stop the development server, press Ctrl+C. A local server stops being available when your computer is off; GitHub Pages will serve the approved published build independently.
+
+To get the source through Git first:
+
+```powershell
+git clone https://github.com/whybemqd/logiclab.git
+cd logiclab
+npm ci
+npm run dev
+```
+
+If PowerShell blocks `npm.ps1`, use `npm.cmd` in place of `npm` for these commands; no global execution-policy change is needed.
 
 Production preview and tests:
 
@@ -68,13 +79,13 @@ Limits: 6 input switches, 48 components, 96 wires, 8 output indicators, 256 KiB 
 
 See [actual local test results](docs/TEST-RESULTS.md), [learning guide](docs/LEARNING-GUIDE.md), [exercises](docs/EXERCISES.md), [separate answers](docs/ANSWERS.md) and [contribution record](docs/DEVELOPMENT-NOTES.md).
 
-Screenshots in `docs/screenshots/` are actual captures from the local production application. Desktop and Chromium mobile-emulation workflows are tested; this is not a claim of testing a physical Android/iPhone or every browser.
+Screenshots in `docs/screenshots/` are actual captures of the application, refreshed against the deployed public site after verification. Desktop and Chromium mobile-emulation workflows are tested; this is not a claim of testing a physical Android/iPhone or every browser.
 
 ## GitHub Pages
 
 The project-site base is `/logiclab/` in `vite.config.ts`. The workflow tests and builds before deploying `dist/`, with a `github-pages` environment and Pages/OIDC deployment permissions. Pull requests test but do not deploy. The site uses no path router; hash links and refreshing `/logiclab/` work without special rewrite rules.
 
-See [publishing steps and approval boundary](docs/DEPLOYMENT.md). After deployment, run the browser suite against the real URL and independently open it without authentication:
+See [deployment record and update instructions](docs/DEPLOYMENT.md). To repeat the checks against the real public URL:
 
 ```powershell
 $env:LOGICLAB_BASE_URL = 'https://whybemqd.github.io/logiclab/'
@@ -86,6 +97,6 @@ Official documentation checked on 5 November 2026: [Vite project-site base and P
 
 ## Portfolio and authorship
 
-[Page 11 Thai draft](docs/PORTFOLIO-PAGE-11.md) includes factual project copy, local evidence and a 60–90 second demonstration script. Public URL, final QR and personal learning claims remain pending until publication verification and a student exercise review. AI created this initial implementation and ran the recorded local checks. Do not claim those were independently written or personally tested by the applicant. Record later student changes and tests separately.
+[Page 11 Thai draft](docs/PORTFOLIO-PAGE-11.md) includes factual project copy, actual screenshots, the verified public URL and QR, and a 60–90 second demonstration script. A print-ready A4 layout and rendered image are included as `docs/portfolio-page-11-DRAFT.html` and `.png`. Its personal learning/contribution wording remains a draft until the applicant chooses to complete an exercise review. This review does not block using or publishing the application. AI created this initial implementation and ran the recorded local, CI and public browser checks; record later student changes and tests separately.
 
 The attribution above is the supplied project credit. It does not establish that the applicant personally wrote or tested the code. Third-party notices are in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).

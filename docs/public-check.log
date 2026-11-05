@@ -1,0 +1,38 @@
+
+> logiclab@1.0.0 test:e2e
+> playwright test
+
+
+Running 20 tests using 1 worker
+
+(node:220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop] › e2e\workflow.spec.ts:11:1 › load half-adder, toggle inputs, verify and capture working application (9.1s)
+  ok  2 [desktop] › e2e\workflow.spec.ts:54:1 › broken example identifies exact mismatch and repair passes (1.5s)
+  ok  3 [desktop] › e2e\workflow.spec.ts:93:1 › full-adder verifies eight cases and live carry-in works (684ms)
+  ok  4 [desktop] › e2e\workflow.spec.ts:110:1 › export JSON, change state, then import restores circuit and expected table (1.1s)
+  ok  5 [desktop] › e2e\workflow.spec.ts:136:1 › malformed import shows an error and leaves circuit intact (555ms)
+  ok  6 [desktop] › e2e\workflow.spec.ts:149:1 › expected editor uses independent editable answers (764ms)
+  ok  7 [desktop] › e2e\workflow.spec.ts:164:1 › missing inputs stay unknown and prevent a passing verification (789ms)
+  ok  8 [desktop] › e2e\workflow.spec.ts:181:1 › base-path assets load, no external runtime assets, and refresh works (607ms)
+  ok  9 [desktop] › e2e\workflow.spec.ts:216:1 › desktop manual gate repair and node movement (919ms)
+  ok 10 [desktop] › e2e\workflow.spec.ts:239:1 › desktop can delete and reconnect a wire, then rejects multiple drivers (917ms)
+(node:26796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 11 [mobile] › e2e\workflow.spec.ts:11:1 › load half-adder, toggle inputs, verify and capture working application (1.3s)
+  ok 12 [mobile] › e2e\workflow.spec.ts:54:1 › broken example identifies exact mismatch and repair passes (1.3s)
+  ok 13 [mobile] › e2e\workflow.spec.ts:93:1 › full-adder verifies eight cases and live carry-in works (679ms)
+  ok 14 [mobile] › e2e\workflow.spec.ts:110:1 › export JSON, change state, then import restores circuit and expected table (905ms)
+  ok 15 [mobile] › e2e\workflow.spec.ts:136:1 › malformed import shows an error and leaves circuit intact (536ms)
+  ok 16 [mobile] › e2e\workflow.spec.ts:149:1 › expected editor uses independent editable answers (672ms)
+  ok 17 [mobile] › e2e\workflow.spec.ts:164:1 › missing inputs stay unknown and prevent a passing verification (734ms)
+  ok 18 [mobile] › e2e\workflow.spec.ts:181:1 › base-path assets load, no external runtime assets, and refresh works (656ms)
+  -  19 [mobile] › e2e\workflow.spec.ts:216:1 › desktop manual gate repair and node movement
+  -  20 [mobile] › e2e\workflow.spec.ts:239:1 › desktop can delete and reconnect a wire, then rejects multiple drivers
+
+  2 skipped
+  18 passed (26.6s)

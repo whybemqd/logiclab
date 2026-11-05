@@ -25,10 +25,22 @@ Engine checks cover every supported gate, all 4 half-adder and 8 full-adder comb
 | Broken half-adder | 3 passing, 1 failing; only A=1/B=1, Expected Sum=0, Actual Sum=1 |
 | Repaired half-adder | 4 passing, 0 failing |
 
-Actual screenshots are captured by the passing browser suite in `docs/screenshots/working-desktop.png`, `error-desktop.png`, `working-mobile.png` and `error-mobile.png`. The `working-circuit.png`, `working-verification.png`, `error-circuit.png` and `error-verification.png` files capture the corresponding real sections for portfolio layout. They show local application behavior, not a public deployment. The final combined run's raw output is retained in `docs/local-check.log`.
+Actual screenshots are captured by the passing browser suite in `docs/screenshots/working-desktop.png`, `error-desktop.png`, `working-mobile.png` and `error-mobile.png`. The `working-circuit.png`, `working-verification.png`, `error-circuit.png` and `error-verification.png` files capture the corresponding real sections for portfolio layout. These captures were refreshed against the public deployment after it succeeded. The final local combined run's raw output is retained in `docs/local-check.log` and the public browser run in `docs/public-check.log`.
 
 The first E2E run failed because the test locator “Check all inputs” matched both the real button and a guided-step button. Exact-name matching fixed the test harness. Passing results above refer to the corrected run. No timing or performance benchmarks were conducted; no performance claim is made.
 
 ## Public deployment verification
 
-**Pending publishing approval. No public URL has been verified and no GitHub Actions deployment has run.** Intended address: `https://whybemqd.github.io/logiclab/`. Replace this status only after actual unauthenticated public checks and record their real results.
+**Passed on 5 November 2026.** The owner explicitly approved publishing after the local preview was presented.
+
+- Public repository: [whybemqd/logiclab](https://github.com/whybemqd/logiclab).
+- Verified public URL: [LogicLab](https://whybemqd.github.io/logiclab/).
+- Successful initial workflow: [run 42051153503](https://github.com/whybemqd/logiclab/actions/runs/42051153503), commit `9e0bd37256cf8df032a0e5336cefd64090bb7d3d`.
+- CI independently passed **74 unit tests**, the TypeScript/Vite production build, and **18 browser tests with 2 intentional mobile skips** on GitHub's Ubuntu runner.
+- Anonymous `Invoke-WebRequest` to the public URL returned **HTTP 200**.
+- Setting `LOGICLAB_BASE_URL=https://whybemqd.github.io/logiclab/` and running `npm run test:e2e` against the actual hosted application passed **18 tests, 2 intentional skips, 0 failures**. Fresh browser contexts used no authentication state.
+- Public checks confirmed asset responses without 404s, no external runtime asset requests, half-adder 4/4, full-adder 8/8, broken half-adder 3/4 at the precise 11 mismatch, repair 4/4, live input changes, JSON behavior and refreshing `/logiclab/`.
+- A separate in-app browser visit to the public URL observed A=B=1, Sum=0, Carry=1 and 4/4 verification.
+- Verification recorded at `2026-11-05T15:07:08Z` (5 November 2026, 22:07 in Thailand).
+
+`docs/deployment-status.json` records this verified initial application commit. Later documentation/portfolio commits do not alter its simulator behavior. No performance benchmark or physical-phone test is claimed.

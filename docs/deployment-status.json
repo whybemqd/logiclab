@@ -1,10 +1,10 @@
 {
-  "status": "pending-approval",
+  "status": "verified",
   "repository": "https://github.com/whybemqd/logiclab",
   "proposedUrl": "https://whybemqd.github.io/logiclab/",
-  "verifiedUrl": null,
-  "verifiedAt": null,
-  "workflowRun": null,
-  "commit": null,
+  "verifiedUrl": "https://whybemqd.github.io/logiclab/",
+  "verifiedAt": "2026-11-05T15:07:08Z",
+  "workflowRun": "https://github.com/whybemqd/logiclab/actions/runs/42051153503",
+  "commit": "9e0bd37256cf8df032a0e5336cefd64090bb7d3d",
   "studentExercisesReviewed": false
 }

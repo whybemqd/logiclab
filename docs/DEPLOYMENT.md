@@ -1,17 +1,18 @@
 Built by Olivia — https://discord.gg/ojailbreaks
 
-# Publishing plan — GitHub Pages only
+# Deployment record — GitHub Pages only
 
-**Status: not published. Approval is required by the original project request after the finished preview is presented.** The later clarification confirms GitHub hosting and does not remove that review step. No ChatGPT Sites project or domain has been created.
+**Published and verified.** The owner explicitly approved creating this new public repository and GitHub Pages deployment after the finished local preview was presented. No ChatGPT Sites project or domain has been created.
 
-Exact proposed new public repository: `https://github.com/whybemqd/logiclab`.
-Exact intended public demo URL: `https://whybemqd.github.io/logiclab/`.
+Public source: [whybemqd/logiclab](https://github.com/whybemqd/logiclab).
+Verified demo: [LogicLab](https://whybemqd.github.io/logiclab/).
+Successful initial workflow: [42051153503](https://github.com/whybemqd/logiclab/actions/runs/42051153503).
 
-The authenticated local GitHub CLI is available as `whybemqd`. No account-access blocker was observed during the initial check. The repository endpoint returned 404 before project creation; recheck it immediately before creating the repository. If it now exists, stop and resolve the name conflict; do not reuse or overwrite it.
+The authenticated GitHub CLI account is `whybemqd`. The exact repository endpoint returned 404 both before project-file creation and immediately before approved repository creation. Only the new LogicLab source directory was pushed. Pages uses `build_type=workflow` and HTTPS. See `TEST-RESULTS.md` for anonymous public acceptance results.
 
-## After approval
+## Initial publishing procedure — completed
 
-Run in the project directory only. These commands publish source code and included documentation/screenshots publicly. Do not run before the owner approves this exact destination and preview.
+The following is the initial creation record, not an instruction to recreate the existing repository. It was executed in the project directory after approval. Source, documentation and screenshots are public. For subsequent changes, edit locally, run `npm run check`, commit and push to `main`; the included workflow tests, builds and deploys automatically.
 
 ```powershell
 # Read-only recheck: a 404 is required. A 200 means stop.
@@ -42,9 +43,9 @@ The initial `[skip ci]` marker skips push-triggered checks only; the explicit `w
 
 Browser equivalent: open the new repository → Settings → Pages → Build and deployment → Source **GitHub Actions**. Under Actions → General, permit the included workflow if account settings require it. The workflow grants only read access in the build job and Pages/OIDC write access in the deployment job. The `github-pages` environment may request approval if the account has protection rules; satisfy those in GitHub without weakening unrelated settings.
 
-## Acceptance after the deployment is actually successful
+## Public acceptance — completed; repeat after changes
 
-Open the **real URL returned by GitHub Pages** without signing in. Confirm HTTP 200, bundled JS/CSS/fonts/icons without 404s, half-adder live inputs, 4/4 and full-adder 8/8, broken example 3/4, repair 4/4, and page refresh. The app has no path routing, so refresh the project root `/logiclab/`, not a made-up nested route.
+The real URL returned by GitHub Pages was opened without signing in and returned HTTP 200. Public checks passed for bundled JS/CSS/fonts/icons without 404s, half-adder live inputs and 4/4, full-adder 8/8, broken example 3/4, repair 4/4, and page refresh. The app has no path routing, so refresh the project root `/logiclab/`, not a made-up nested route.
 
 ```powershell
 $env:LOGICLAB_BASE_URL = 'https://whybemqd.github.io/logiclab/'
@@ -52,7 +53,7 @@ npm run test:e2e
 Remove-Item Env:LOGICLAB_BASE_URL
 ```
 
-The browser tests create fresh anonymous contexts without GitHub cookies or credentials. Record actual successful run ID, commit, returned URL, date and browser results in `TEST-RESULTS.md`. Only then change the README to deployed, replace draft URL wording, and generate the final QR. Update the portfolio's personal learning claims only after the exercise review too.
+The browser tests use fresh anonymous contexts without GitHub cookies or credentials. Actual run ID, initial application commit, URL, date and results are recorded in `TEST-RESULTS.md`. The final QR is in `docs/portfolio-assets/demo-qr.png`. Personal learning wording remains a draft independently of deployment status.
 
 ## If account access later blocks these steps
 
